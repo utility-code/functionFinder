@@ -31,7 +31,7 @@
 (Find them in your project directory as classes.png and functions.png)
 
  - Functions
-! [](./classes.png)
+![](./classes.png)
  
  - Modules
  ![](./functions.png)
