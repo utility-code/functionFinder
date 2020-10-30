@@ -1,1 +1,2 @@
+jupytext==1.6.0
 graphviz==0.14.2

@@ -4,6 +4,8 @@ from pathlib import Path
 import argparse
 import ast
 from graphviz import Digraph
+import jupytext
+import os
 
 opt = argparse.ArgumentParser("Function grapher")
 opt.add_argument("-d", "--dir", help="Enter directory")
@@ -35,11 +37,26 @@ def get_all_functions(filename):
 def get_files(file_path):
     print("[INFO] Creating list of files")
     all_files = Path(file_path)
+    try:
+        ipynb_files = [ path for path in all_files.rglob("*.ipynb") ]
+        tmp = [os.system(f"jupytext --to py {fil}") for fil in ipynb_files]
+    except:
+        ipynb_files = []
+    
     py_files = {path: [] for path in all_files.rglob("*.py")}
     fils = list(py_files.keys())
+    
     for fil in fils:
-        py_files[fil] = get_all_functions(fil)
+        try:
+            py_files[fil] = get_all_functions(fil)
+        except SyntaxError:
+            print(f"Could not read file: {fil}")
+            
     print("[INFO] Done creating list of files")
+    
+    for fil in ipynb_files:
+        if "checkpoint" not in str(fil):
+            os.remove(str(fil).replace(".ipynb", ".py"))
     return py_files
 
 
@@ -51,8 +68,11 @@ def graph_creator(dictionary, retType="functions"):
     for file in dictionary:
         dot.node(file.name)
         # Add functions/classes
-        for methods in dictionary[file][retType]:
-            dot.edge(file.name, methods)
+        try:
+            for methods in dictionary[file][retType]:
+                dot.edge(file.name, methods)
+        except TypeError:
+            pass
 
     print(dot.source)
     # Save graphs in required location

@@ -3,13 +3,17 @@
  
  - Every found a library with so many files you lose track of which function/class comes from where?
  - What if you could see it visually :o
- > Note: this will only work with python files (for now atleast)
  
  I keep facing this problem everytime and I decided to act on it once and for all.
+
+## Supports
+
+- .py (Normal python file)
+- .ipynb (If you have it for python that is)
+
+## How to run
  
- ## How to run
- 
- - Get requirements (Pathlib, graphviz)
+ - Get requirements (Pathlib, graphviz, jupytext)
  ```
  pip install -r requirements.txt
  ```
@@ -26,7 +30,8 @@
    ```py
     python main.py -fc -d "../datafly/" 
    ```
- 
+> This also takes Jupyter notebooks into account
+
  ## Outputs
 
 (Find them in your project directory as classes.png and functions.png)
