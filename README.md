@@ -21,6 +21,7 @@
  - Arguments (Default is True. Change only if you want False)
    - -f Generate for Functions
    - -c Generate for Classes
+   - -fo Format to save graph. **Default png. If you have a "huge" library. Use pdf or svg**
    - ef:
    ```py
     python main.py -fc -d "../datafly/" 

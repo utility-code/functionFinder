@@ -11,6 +11,8 @@ opt.add_argument(
     "-f", type=bool, help="Generate for functions. True by default", default=True)
 opt.add_argument(
     "-c", type=bool, help="Generate for classes. True by default", default=True)
+opt.add_argument(
+    "-fo", help="Format to save. Default pdf. Choose between svg/pdf/png etc.", default="png")
 args = opt.parse_args()
 
 
@@ -44,7 +46,7 @@ def get_files(file_path):
 def graph_creator(dictionary, retType="functions"):
     # Create the graph
     dot = Digraph("Project")
-    dot.format = 'png'
+    dot.format = args.fo
     # Create node names
     for file in dictionary:
         dot.node(file.name)
