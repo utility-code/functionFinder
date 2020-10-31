@@ -14,6 +14,7 @@
 ## How to run
  
  - Get requirements (Pathlib, graphviz, jupytext)
+ - Install graphviz (If you have linux you can get it from apt/aur ; For windows install it from their site)
  ```
  pip install -r requirements.txt
  ```
