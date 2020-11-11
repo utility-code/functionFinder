@@ -1,6 +1,8 @@
 # Function Finder 
  -----
- 
+
+ - This is now on pypi!!! [Link](https://pypi.org/project/functionvis/)
+
  - Every found a library with so many files you lose track of which function/class comes from where?
  - What if you could see it visually :o
  
@@ -12,25 +14,15 @@
 - .ipynb (If you have it for python that is)
 
 ## How to run
- 
+
+ - Do a pip install functionvis
  - Get requirements (Pathlib, graphviz, jupytext)
  - Install graphviz (If you have linux you can get it from apt/aur ; For windows install it from their site)
- ```
- pip install -r requirements.txt
- ```
- - Just invoke the main.py file with the argument as the directory which you want to visualize
- - eg:
- ```py
- python main.py -d "Your directory path"
- ```
- - Arguments (Default is True. Change only if you want False)
-   - -f Generate for Functions
-   - -c Generate for Classes
-   - -fo Format to save graph. **Default png. If you have a "huge" library. Use pdf or svg**
-   - ef:
-   ```py
-    python main.py -fc -d "../datafly/" 
-   ```
+ - python
+ - ```py
+    import functionvis
+    functionvis.mainrunner()
+    ```
 > This also takes Jupyter notebooks into account
 
  ## Outputs

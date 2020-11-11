@@ -1,0 +1,39 @@
+# Function Finder
+
+Have a complex library? 
+Want to either understand someone elses or make your library easier to understand? 
+
+What if you could generate a detailed graph of all the functions and classes in your package. Including links between common functions in multiple files. Now you can
+
+# What files are taken into account?
+
+- .py
+- .ipynb (Jupyter notebook)
+
+# Outputs
+
+- functions.pdf
+- classes.pdf
+- Extension can be configured
+
+# How to use?
+
+- cd to any directory you want
+- Default outputs are in pdf
+```py
+import functionfinder
+functionfinder.runner()
+```
+- Change the format of the outputs
+```py
+import functionfinder
+functionfinder.runner(".", "svg")
+```
+
+# Example
+
+- Functions
+![](./classes.png)
+
+- Modules
+![](./functions.png)
