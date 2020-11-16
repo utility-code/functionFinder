@@ -35,8 +35,16 @@
  - Modules
  ![](./functions.png)
  
- ## ToDo + Contributions
+## Contribution Rules
+- Contributions are welcome :)
+- If you want to add support for a new language/add specific functions, use the testing branch.
+- Be sure to add a proper explanation with each commit. 
+- Keep your commits short. I cannot go through 100 lines of change at once
+- Radical idea? Amazing!! Put it as an issue first
+- Suggestion? Add it as an issue / drop a PR
+- Did I miss something? Let me know.
+
+## ToDo
  
  - Other languages such as Julia/C/Java etc.
- - Contributions welcome
  - Bugs will be squashed if you tell me what they are
