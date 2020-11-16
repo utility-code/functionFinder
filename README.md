@@ -1,42 +1,66 @@
-# Function Finder 
- -----
+===============
+Function Finder
+===============
 
- - This is now on pypi!!! [Link](https://pypi.org/project/functionvis/)
+An efficient Python library to help you to visually keep track fo your functions and classes
+It aims to make easier to work with those libraries with so many files that one usually
+loses track of where which function or class comes from
 
- - Every found a library with so many files you lose track of which function/class comes from where?
- - What if you could see it visually :o
- 
- I keep facing this problem everytime and I decided to act on it once and for all.
 
-## Supports
+Example Usage
+-------------
+
+    import functionvis
+    functionvis.mainrunner()
+> This also takes Jupyter notebooks into account
+
+
+Install
+-------
+
+The latest stable version can always be installed or updated via [pip](https://pypi.org/project/functionvis/):
+
+
+
+    $ pip install functionvis
+
+Make sure to also install the requirements (Pathlib, graphviz, jupytext):
+
+    $ pip install graphviz==0.14.2
+    $ Pip install jupytext==1.6.0
+    $ pip install pathlib
+
+If the above fails for graphviz (If you have linux you can get it from apt/aur ; For windows install it from their site)   
+
+For conda users:
+
+    conda create --name <NAME_OF_THE_ENV> python=3.6
+    pip install functionvis
+    Pip install jupytext==1.6.0
+    Pip install fire
+    conda install graphviz python-graphviz
+
+
+Supports
+-------
 
 - .py (Normal python file)
 - .ipynb (If you have it for python that is)
 
-## How to run
 
- - Do a pip install functionvis
- - Get requirements (Pathlib, graphviz, jupytext)
- - Install graphviz (If you have linux you can get it from apt/aur ; For windows install it from their site)
- - python
- - ```py
-    import functionvis
-    functionvis.mainrunner()
-    ```
-> This also takes Jupyter notebooks into account
-
- ## Outputs
+ Outputs
+ -------
 
 (Find them in your project directory as classes.png and functions.png)
 
  - Functions
 ![](./classes.png)
- 
+
  - Modules
  ![](./functions.png)
- 
- ## ToDo + Contributions
- 
+
+ToDo + Contributions
+-------
  - Other languages such as Julia/C/Java etc.
  - Contributions welcome
  - Bugs will be squashed if you tell me what they are
