@@ -4,3 +4,12 @@
 *.jpeg
 *.mp3
 *.wav
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+
+# IDE Stuff
+.vscode/
+.history
+*.DS_Store
