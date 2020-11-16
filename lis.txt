@@ -5,35 +5,68 @@ Want to either understand someone elses or make your library easier to understan
 
 What if you could generate a detailed graph of all the functions and classes in your package. Including links between common functions in multiple files. Now you can
 
+# External requirements
+- This requires the [graphviz library](https://graphviz.org/download/)
+
 # What files are taken into account?
 
 - .py
 - .ipynb (Jupyter notebook)
-
-# Outputs
-
-- functions.pdf
-- classes.pdf
-- Extension can be configured
 
 # How to use?
 
 - cd to any directory you want
 - Default outputs are in pdf
 ```py
-import functionfinder
-functionfinder.runner()
+import functionvis
+functionvis.mainrunner()
 ```
 - Change the format of the outputs
 ```py
-import functionfinder
-functionfinder.runner(".", "svg")
+import functionvis
+functionvis.mainrunner(".", "svg")
+```
+- Run for another directory
+```py
+import functionvis
+functionvis.mainrunner("path-to-dir", "svg")
 ```
 
-# Example
+# Outputs
 
-- Functions
-![](./classes.png)
+- Graph of all functions/classes and their related links
+- Relationships between files
+- functions.pdf (With all the functions)
+- classes.pdf (With all the classes)
+- Extension can be configured
+- Saved in project dir
 
-- Modules
-![](./functions.png)
+# Outputs supported
+
+- pdf
+- png
+- svg
+- jpg
+- Others might work so just try
+
+# Examples
+
+Check the repo for examples
+[repo](https://github.com/SubhadityaMukherjee/functionFinder)
+
+# FAQ
+
+## Not Working
+- Have you installed graphviz? 
+- Do you have jupytext and graphviz installed
+- Are you trying for python files?
+
+## Windows?
+- I cant check the compatibility but it should work
+
+## Where are the outputs?
+- Wherever you opened python from
+- Or wherever you put the first argument from
+
+## Can I convert this to other languages?
+- Yes please. Contributions are welcome
