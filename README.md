@@ -9,11 +9,21 @@ loses track of where which function or class comes from
 
 Example Usage
 -------------
+> This also takes Jupyter notebooks into account
 
     import functionvis
     functionvis.mainrunner()
-> This also takes Jupyter notebooks into account
 
+
+In case you want to change the output on a specific format
+
+    import functionvis
+    functionvis.mainrunner(".", "svg")
+
+You can also specify the path
+
+    import functionvis
+    functionvis.mainrunner("path-to-dir", "svg")
 
 Install
 -------
@@ -58,6 +68,18 @@ Supports
 
  - Modules
  ![](./functions.png)
+
+supported Outputs format
+-------
+
+| Format        | Suported (tested)      |
+| ------------- |:-------------:|
+| pdf           | YES           |
+| png           | YES           |  
+| svg           | YES           |
+| jpg           | YES           |
+| gif           | YES           |
+
 
 ToDo + Contributions
 -------
