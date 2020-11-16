@@ -1,6 +1,6 @@
-===============
 Function Finder
-===============
+-------
+
 
 An efficient Python library to help you to visually keep track fo your functions and classes
 It aims to make easier to work with those libraries with so many files that one usually
